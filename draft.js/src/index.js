@@ -1,10 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import DraftEditor from './components/DraftEditor'
 
-class HelloWorld extends React.Component {
+class Root extends React.Component {
   render() {
-    return <h1>The React Seed Project</h1>
+    return (
+    <div>
+        <h1>Draft.JS rich text editor</h1>
+        <div>
+            <DraftEditor />
+        </div>
+    </div>
+    )
   }
 }
 
-ReactDOM.render(<HelloWorld/>, document.getElementById('app'));
+ReactDOM.render(<Root/>, document.getElementById('app'));
