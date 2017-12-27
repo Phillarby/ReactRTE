@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DraftEditor from './components/DraftEditor'
+import './style.css'
 
 class Root extends React.Component {
   render() {
