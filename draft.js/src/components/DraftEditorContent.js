@@ -1,0 +1,6 @@
+
+import {convertFromRaw} from 'draft-js';
+
+const RawJScontent = `{"entityMap":{},"blocks":[{"key":"flkmh","text":"This content has been loaded from state.","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":34,"length":5,"style":"BOLD"}],"entityRanges":[],"data":{}},{"key":"b46s6","text":"It's LOVELY how it can do this. ","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":5,"length":6,"style":"ITALIC"},{"offset":5,"length":6,"style":"UNDERLINE"}],"entityRanges":[],"data":{}},{"key":"7ik73","text":"This should","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"fvvf","text":"Make me very happy","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"2l6oe","text":"Make you very happy","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"ec2r9","text":"Result in celebrations","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"eok8h","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}]}`
+const content = JSON.parse(RawJScontent);
+export default convertFromRaw(content);

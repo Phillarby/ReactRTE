@@ -1,13 +1,16 @@
 import React from 'react';
-import {Editor, EditorState, RichUtils} from 'draft-js';
+import {Editor, EditorState, RichUtils, convertToRaw} from 'draft-js';
 import {stateToHTML} from 'draft-js-export-html';
 import '../../node_modules/draft-js/dist/Draft.css';
+import content from './DraftEditorContent';
 
 export default class DraftEditor extends React.Component {
 
+
     constructor(props) {
         super(props);
-        this.state = {editorState: EditorState.createEmpty()};
+        console.log({content: content});
+        this.state = {editorState: EditorState.createWithContent(content)};
         this.onChange = (editorState) => this.setState({editorState});
     }
 
@@ -47,11 +50,13 @@ export default class DraftEditor extends React.Component {
         console.log(this.state.editorState);
     }
 
+    onShowStateContentClick() {
+        console.log(convertToRaw(this.state.editorState.getCurrentContent()));
+    }
+
     onShowHTMLContentClick() {
         console.log(stateToHTML(this.state.editorState.getCurrentContent()));
     }
-
-
 
     /**
      * This provides out-of-the-box keyboard shortcuts
@@ -81,10 +86,12 @@ export default class DraftEditor extends React.Component {
                       editorState={this.state.editorState}
                       onChange={this.onChange}
                       blockStyleFn={this.myBlockStyleFn}
+                      spellCheck={true}
                   />
                 </div>
                 <button onClick={this.onShowStateClick.bind(this)}>Log Editor State</button>
-                <button onClick={this.onShowHTMLContentClick.bind(this)}>HTML Content</button>
+                <button onClick={this.onShowStateContentClick.bind(this)}>Log Editor Content</button>
+                <button onClick={this.onShowHTMLContentClick.bind(this)}>Log HTML Content</button>
             </div>
         );
     }

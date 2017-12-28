@@ -7,7 +7,11 @@
 
 .plainbortingoldtext {
     color: #999;
-    font-family: 'Hoefler Text', Georgia, serif;
-    font-style: italic;
-    text-align: center;
+    font-family: 'Gill Sans', sans-serif;
+    text-align: left;
+}
+
+.editor {
+    border: 1px solid;
+    padding: 2px;
 }
