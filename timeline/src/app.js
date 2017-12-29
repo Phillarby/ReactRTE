@@ -1,5 +1,5 @@
 import React from 'react';
-import HelloWorld from './components/HelloWorld';
+import Narrative from './components/Narrative';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 export default class App extends React.Component {
@@ -7,8 +7,8 @@ export default class App extends React.Component {
         return (
             <MuiThemeProvider>
                 <div>
-                    <h1>The React Seed Project</h1>
-                    <HelloWorld />
+                    <h1>Narrative Timeline Spike</h1>
+                    <Narrative />
                 </div>
             </MuiThemeProvider>
         );
