@@ -15,3 +15,26 @@
     border: 1px solid;
     padding: 2px;
 }
+
+/* to make the hint text visible for testing */
+#chipsWrapper > div > div:nth-child(2){
+    color: black !important;
+    opacity: 1 !important;
+}
+
+/* change chip colour */
+#chipsWrapper > div > div:nth-child(1) > div > div {
+    background-color: teal !important;
+}
+/* change chip text colour */
+#chipsWrapper > div > div:nth-child(1) > div > div > span{
+    color: white !important;
+}
+/* chip delete icon colour */
+ #chipsWrapper > div > div:nth-child(1) > div > div > svg >path{
+fill: whitesmoke !important;
+} 
+/* autocomplete margin */
+#chipsWrapper > div > div > div {
+    margin: 10px !important;
+}
